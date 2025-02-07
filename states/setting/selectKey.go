@@ -40,19 +40,19 @@ func updateWaiting() {
 		// mouse
 		k = -1
 		if ray.IsMouseButtonReleased(ray.MouseButtonLeft) {
-			k = ray.MouseButtonLeft
+			k = int32(ray.MouseButtonLeft)
 		} else if ray.IsMouseButtonReleased(ray.MouseButtonRight) {
-			k = ray.MouseButtonRight
+			k = int32(ray.MouseButtonRight)
 		} else if ray.IsMouseButtonReleased(ray.MouseButtonMiddle) {
-			k = ray.MouseButtonMiddle
+			k = int32(ray.MouseButtonMiddle)
 		} else if ray.IsMouseButtonReleased(ray.MouseButtonSide) {
-			k = ray.MouseButtonSide
+			k = int32(ray.MouseButtonSide)
 		} else if ray.IsMouseButtonReleased(ray.MouseButtonExtra) {
-			k = ray.MouseButtonExtra
+			k = int32(ray.MouseButtonExtra)
 		} else if ray.IsMouseButtonReleased(ray.MouseButtonForward) {
-			k = ray.MouseButtonForward
+			k = int32(ray.MouseButtonForward)
 		} else if ray.IsMouseButtonReleased(ray.MouseButtonBack) {
-			k = ray.MouseButtonBack
+			k = int32(ray.MouseButtonBack)
 		}
 		if k >= 0 {
 			if currentI == 0 {

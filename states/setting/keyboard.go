@@ -301,19 +301,19 @@ func GetKeyName(gKey game.Key) string {
 		}
 	} else if gKey.KeyType == game.Mouse {
 		switch key {
-		case ray.MouseButtonLeft:
+		case int32(ray.MouseButtonLeft):
 			return "LeftMouseButton"
-		case ray.MouseButtonRight:
+		case int32(ray.MouseButtonRight):
 			return "RightMouseButton"
-		case ray.MouseButtonMiddle:
+		case int32(ray.MouseButtonMiddle):
 			return "MiddleMouseButton"
-		case ray.MouseButtonSide:
+		case int32(ray.MouseButtonSide):
 			return "SideMouseButton"
-		case ray.MouseButtonExtra:
+		case int32(ray.MouseButtonExtra):
 			return "ExtraMouseButton"
-		case ray.MouseButtonForward:
+		case int32(ray.MouseButtonForward):
 			return "ForwardMouseButton"
-		case ray.MouseButtonBack:
+		case int32(ray.MouseButtonBack):
 			return "BackMouseButton"
 		}
 	}

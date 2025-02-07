@@ -16,7 +16,7 @@ type Texture struct {
 func NewTexture(path string, src ray.Rectangle) *Texture {
 	var t Texture
 	t.Texture = ray.LoadTexture(path)
-	if !ray.IsTextureReady(t.Texture) {
+	if t.Texture.ID == 0 {
 		panic("texture loading failed")
 	}
 	t.Src = src

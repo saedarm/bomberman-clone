@@ -168,7 +168,7 @@ func UpdateKeys() {
 	}
 	for k, v := range firstKeyMap {
 		if v.KeyType == Mouse {
-			keyStates[k] = ray.IsMouseButtonDown(v.Keyid)
+			keyStates[k] = ray.IsMouseButtonDown(ray.MouseButton(v.Keyid))
 		} else {
 			keyStates[k] = ray.IsKeyDown(v.Keyid)
 		}
@@ -178,7 +178,7 @@ func UpdateKeys() {
 			continue
 		}
 		if v.KeyType == Mouse {
-			keyStates[k] = ray.IsMouseButtonDown(v.Keyid)
+			keyStates[k] = ray.IsMouseButtonDown(ray.MouseButton(v.Keyid))
 		} else {
 			keyStates[k] = ray.IsKeyDown(v.Keyid)
 		}
